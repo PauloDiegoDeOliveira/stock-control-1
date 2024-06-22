@@ -1,36 +1,39 @@
 import { Component } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { Router, RouterModule } from '@angular/router';
+import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
-import { ButtonModule } from 'primeng/button';
-import { CardModule } from 'primeng/card';
-import { ToolbarModule } from 'primeng/toolbar';
+import { DialogService } from 'primeng/dynamicdialog';
+import { ProductEvent } from 'src/app/models/enums/products/ProductEvent';
+import { ProductFormComponent } from 'src/app/modules/products/components/product-form/product-form.component';
 
 @Component({
   selector: 'app-toolbar-navigation',
-  standalone: true,
-  imports: [
-    FormsModule,
-    ReactiveFormsModule,
-    RouterModule,
-    ToolbarModule,
-    CardModule,
-    ButtonModule,
-  ],
   templateUrl: './toolbar-navigation.component.html',
+  styleUrls: ['./toolbar-navigation.component.scss'],
 })
 export class ToolbarNavigationComponent {
-
   constructor(
     private cookie: CookieService,
     private router: Router,
-  ) { }
+    private dialogService: DialogService
+  ) {}
 
+  //Fazer logout do sistema
   handleLogout(): void {
-    this.cookie.delete('USER_INFO');
-    void this.router.navigate(['/home']);
+    this.cookie.delete('USER_INFO'); //Deleta o token JWT dos cookies
+    void this.router.navigate(['/home']); //Redireciona para a tela de login, a rota '/home'
   }
 
+  handleSaleProduct(): void {
+    const saleProductAction = ProductEvent.SALE_PRODUCT_EVENT;
+    this.dialogService.open(ProductFormComponent, {
+      header: saleProductAction,
+      width: '70%',
+      contentStyle: { overflow: 'auto' },
+      baseZIndex: 10000,
+      maximizable: true,
+      data: {
+        event: { action: saleProductAction },
+      }
+    });
+  }
 }
-
-

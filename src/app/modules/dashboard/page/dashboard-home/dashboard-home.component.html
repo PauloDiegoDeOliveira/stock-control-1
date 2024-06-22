@@ -1,0 +1,18 @@
+<app-toolbar-navigation>
+  <div *ngIf="ObservableTest$ | async as product"></div>
+</app-toolbar-navigation>
+
+<div class="grid">
+  <div class="col-12">
+    <p-card
+      header="Quantidade de produtos em estoque"
+      styleClass="shadow-3 m- text-indigo-800"
+    >
+      <p-chart
+        type="bar"
+        [data]="productsChartDatas"
+        [options]="productsCharOptions"
+      ></p-chart>
+    </p-card>
+  </div>
+</div>
