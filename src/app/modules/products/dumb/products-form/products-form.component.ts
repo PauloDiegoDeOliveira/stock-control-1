@@ -10,14 +10,16 @@ import { DynamicDialogConfig } from 'primeng/dynamicdialog';
 import { InputTextModule } from 'primeng/inputtext';
 import { Subject, takeUntil } from 'rxjs';
 
-import { productEvent } from '../../../../models/enums/products/productEvent';
+
 import { getCategoriesResponse } from '../../../../models/interface/categories/responses/getCategoriesResponse';
 import { eventAction } from '../../../../models/interface/products/event/eventAction';
 import { createProductRequest } from '../../../../models/interface/products/request/createProductRequest';
 import { editProductResquest } from '../../../../models/interface/products/request/editProductRquest';
 import { getAllProductsResponse } from '../../../../models/interface/products/response/getAllProductsResponse';
-import { ProductsDataTransferService } from '../../../../shared/services/products/products-data-transfer.service';
+
 import { CategoriesService } from './../../../../services/categories/categories.service';
+import { productEvent } from '../../../../models/enums/products/productEvent.enum';
+import { ProductsDataTransferService } from '../../../../shared/services/products.service';
 
 @Component({
   selector: 'app-products-form',

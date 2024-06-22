@@ -22,9 +22,10 @@ import { Subject, takeUntil } from 'rxjs';
 import { eventAction } from '../../models/interface/products/event/eventAction';
 import { getAllProductsResponse } from '../../models/interface/products/response/getAllProductsResponse';
 import { ToolbarNavigationComponent } from '../../shared/components/toolbar-navigation/toolbar-navigation.component';
-import { ProductsDataTransferService } from '../../shared/services/products/products-data-transfer.service';
+
 import { ProductsFormComponent } from './dumb/products-form/products-form.component';
 import { ProductsTableComponent } from './dumb/products-table/products-table.component';
+import { ProductsDataTransferService } from '../../shared/services/products.service';
 
 @Component({
   selector: 'app-products',

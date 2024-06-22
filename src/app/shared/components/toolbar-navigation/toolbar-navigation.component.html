@@ -1,15 +1,51 @@
 <p-toolbar styleClass="bg-gray-900">
   <div class="p-toolbar-group-start">
-    <img src="https://grupotb.com.br/images/logo-tb-prata.png" class="mr-3" style="width: 75px;" />
-    <p-button icon="pi pi-home" label="Dashboard" routerLink="/dashboard" styleClass="bg-gray-800 p-button-secondary" routerLinkActive="exact_route">
+    <img
+      src="https://grupotb.com.br/images/logo-tb-prata.png"
+      class="mr-3"
+      style="width: 75px"
+    />
+    <p-button
+      icon="pi pi-home"
+      label="Dashboard"
+      routerLink="/dashboard"
+      styleClass="bg-gray-800 p-button-secondary"
+      routerLinkActive="exact_route"
+    >
     </p-button>
   </div>
   <div class="p-toolbar-group-center">
-    <p-button icon="pi pi-cart-plus" label="Produtos" routerLink="/products" styleClass="bg-gray-800 p-button-secondary" routerLinkActive="exact_route" class="mr-2"></p-button>
-    <p-button icon="pi pi-ticket" label="Categorias" routerLink="/categories" styleClass="bg-gray-800 p-button-secondary" routerLinkActive="exact_route" class="mr-2"></p-button>
-    <p-button icon="pi pi-credit-card" label="Efetuar Vendas" routerLink="/products" styleClass="bg-gray-800 p-button-secondary" routerLinkActive="exact_route" class="mr-2"></p-button>
+    <p-button
+      icon="pi pi-cart-plus"
+      label="Produtos"
+      routerLink="/products"
+      styleClass="bg-gray-800 p-button-secondary"
+      routerLinkActive="exact_route"
+      class="mr-2"
+    ></p-button>
+    <p-button
+      icon="pi pi-ticket"
+      label="Categorias"
+      routerLink="/categories"
+      styleClass="bg-gray-800 p-button-secondary"
+      routerLinkActive="exact_route"
+      class="mr-2"
+    ></p-button>
+    <p-button
+      icon="pi pi-credit-card"
+      label="Efetuar Vendas"
+      routerLink="/products"
+      styleClass="bg-gray-800 p-button-secondary"
+      routerLinkActive="exact_route"
+      class="mr-2"
+    ></p-button>
   </div>
   <div class="p-toolbar-group-end">
-    <p-button icon="pi pi-sign-out" label="Sair" styleClass="p-button-danger" (onClick)="handleLogout()"></p-button>
+    <p-button
+      icon="pi pi-sign-out"
+      label="Sair"
+      styleClass="p-button-danger"
+      (onClick)="handleLogout()"
+    ></p-button>
   </div>
 </p-toolbar>

@@ -14,7 +14,8 @@ import { Subject, takeUntil } from 'rxjs';
 import { getAllProductsResponse } from '../../models/interface/products/response/getAllProductsResponse';
 import { ProductsService } from '../../services/products/products.service';
 import { ToolbarNavigationComponent } from "../../shared/components/toolbar-navigation/toolbar-navigation.component";
-import { ProductsDataTransferService } from '../../shared/services/products/products-data-transfer.service';
+import { ProductsDataTransferService } from '../../shared/services/products.service';
+
 
 @Component({
   selector: 'app-dashboard',
